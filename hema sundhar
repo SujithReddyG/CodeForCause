@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+	int pens,chocolates,change;
+	printf("enter the value of chocolates,pens");
+	scanf("%d %d",&chocolates,&pens);
+	change=100-(pens*1.5+chocolates*10);
+	printf("%d",change);
+	return 0;
+}
