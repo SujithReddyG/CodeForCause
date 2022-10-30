@@ -1,0 +1,21 @@
+ls" stands for list the things out what ever is there in the desktop 
+"pwd"-print work directory to know where we are 
+"cd"-change directory
+"clear"- clear the screen 
+directory=folder 
+"cd.." is used to go back
+"mkdir"=to create a new folder
+"rmdir"= used to delete a directory
+"touch"=used to create empty files 
+"rm"=is used to delete a file 
+"gcc" = used to compile a file 
+"./a.out"=to run the program
+"nano"=to open new screen 
+to save a file we use 
+ctrl+o
+enter
+ctrl+s
+"VCS"=Version control system
+Initialize an empty git repository
+"md"=markdown documentation
+git config -- global user name "hello"
