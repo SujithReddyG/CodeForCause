@@ -1,0 +1,124 @@
+h3 {
+
+    color: red;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 20px;
+    font-size: 50px;
+    margin-left: 30%;
+}
+h2{
+    color: blue;
+   margin-left: 40%;
+
+}
+.nav a {
+    
+    
+      appearance: none;
+      background-color: #2ea44f;
+      border: 1px solid rgba(27, 31, 35, .15);
+      border-radius: 6px;
+      box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
+      font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      padding: 6px 16px;
+      position: relative;
+      text-align: center;
+      margin: 5;
+      text-decoration: none;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    
+
+img {
+
+    border-radius: 15px;
+    display: block;
+    margin: 5;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.centered {
+
+    color:white;
+    font-size: 70px;
+    position: absolute;
+    font-weight: bold;
+    font-style: oblique; 
+    top: 30%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+
+
+  
+  }
+
+
+ 
+h1 {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+   
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 5;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+h2 {
+    background-color: white;
+    border-radius: 8px;
+    border-style: calc();
+    box-sizing: border-box;
+    
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 20px;
+    list-style: none;
+    margin: 5;
+    outline: none;
+    padding: 10px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: color 100ms;
+    vertical-align: baseline;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+   
+ 
