@@ -1,0 +1,10 @@
+/to calculate biggest of two numbers
+#include<stdio.h>
+int main()
+{
+	inta,b,c;
+	print f("enter the values of a,b,c=");
+	scan f("%d %d %d",&a,&b,&c);
+	(a>b)?(b>c):(a>c)
+	
+}
