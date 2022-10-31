@@ -1,0 +1,430 @@
+#include<stdio.h>
+//#include<string.h>
+int bill=0;
+int welcome();
+int availability();
+int features();
+int rselect();
+int details();
+int cout();
+int restraunt();
+int ind();
+int arab();
+int it();
+int amer();
+int amt(int);
+int main1();
+int main1()
+{
+	int n;
+	printf("\nWhat do you want to access?");
+	printf("\n1: Availabity of rooms");
+	printf("\n2: View features");
+	printf("\n3: Book a room");
+	printf("\n4: Checkout");
+	printf("\n5: Restraunt menu\n");
+	scanf("%d",&n);
+	switch (n)
+	{
+		case 1: availability();break;
+		case 2: features();break;
+		case 3: rselect();break;
+		case 4: cout();break;
+		case 5: restraunt();break;
+		default: printf("Invalid input.");
+	}
+}
+int availability()
+{
+	printf("This is a 7-storeyed apartment with each floor having it's unique speciality.\n");
+	printf("In every floor there are 10 room numbered from 01 to 10\n");
+	printf("As we move upstairs, view fom balcony gets more and more beautiful\n");
+	printf("We suggest you to take rooms numbered from 705 to 710. Coz they have the best view from balcony.\n");
+	printf("Available rooms are 001 to 710.");
+	printf("\n You can choose any room.");
+	printf("\n Every room costs the same.");
+	printf("Thank you.");
+	printf("\nDo you want to book a room?");
+	int k;
+	printf("\n1:Yes\t2:No\n");
+	scanf("%d",&k);
+	switch(k)
+	{
+		case 1:rselect();break;
+		case 2: printf("Thank you for visiting."); return 0; break;;
+		default:break;
+	}
+	
+	 
+}
+int features()
+{
+	int k;
+	printf("What do you want to know about?");
+	printf("\n1: Food");
+	printf("\n2: Ambience");
+	printf("\n3: Room service");
+	printf("\n4: Water supply");
+	printf("\n5: WiFi");
+	printf("\n6: TV");
+	printf("\n7: Room type.\n");
+	scanf("%d",&k);
+	switch(k)
+	{
+		case 1: printf("You can get any type of food based on your taste from restraunt in 5th floor.");break;
+		case 2: printf("Our hotel is India's 2nd most hygenic hotel.");break;
+		case 3: printf("For room service you can feel free to call 911.");break;
+		case 4: printf("There will be no scarcity of drinking water and hot water will be available 24/7");break;
+		case 5: printf("You will be given login credentials after booking room, Unlimited access to anything will be given.");break;
+		case 6: printf("Every room is equipped with a 43-inch display smart TV");break;
+		case 7: printf(" In every floor rooms numbered from 05 to 10 are 2 contains 2 bedrooms.");break;
+		default:  return features();
+	}
+	printf("\nDo you still want to explore?");
+	printf("\n1:Yes\t2:No\n");
+	int j;
+	
+	scanf("%d",&j);
+	switch(j)
+	{
+		case 1:return main1();break;
+		case 2: printf("Thank you for visiting."); return 0; break;;
+		default:break;
+	}
+	 
+}
+int rselect()
+{
+	int rno,fee;
+	printf("Select any room from 001 to 710.\n");
+	scanf("%d",&rno);
+	printf("Thanks for boking the room %d. Your login credentials for WiFi will be mailed to respective email.",rno);
+	if(rno/100 == 7 )
+	{
+		
+			fee=20000;
+		
+	}
+	else if (rno/100 <7 && rno/100>=0 )
+	{
+		
+			fee=10000;
+		
+	}
+	else
+	{
+		printf("Invalid input");
+	}
+	int nd;
+	printf("\nHow many days are you planning to stay:");
+	scanf("%d",&nd);
+	printf("\nFee:%d",fee*nd);
+	details();
+	printf("\nDo you still want to explore?");
+	printf("\n1:Yes\t2:No\n");
+	int j;
+	
+	scanf("%d",&j);
+	switch(j)
+	{
+		case 1:return main1();break;
+		case 2: printf("Thank you for visiting."); return 0; break;;
+		default:break;
+	}
+}
+struct details
+{
+	char name[100];
+	char email[100];
+	char pno[11];
+	char pinno[7];
+	int rno;
+}h;
+int details()
+{
+	printf("\nPLEASE ENTER YOUR DETAILS.\n");
+	FILE *fp;
+	fp=fopen("Details.txt","w");
+	printf("Please enter your name:");
+	scanf("%[^\n]s",h.name);
+	printf("Enter your email address:");
+	scanf(" %s",h.email);
+	printf("Enter your phone number:");
+	scanf(" %s",h.pno);
+	printf("Enter your area pincode:");
+	scanf(" %s",h.pinno);
+	printf("Enter your booked room number:");
+	scanf(" %d",&h.rno);
+	fprintf(fp,"Name: %s\nEmail: %s\nContact: %s\nPin code: %s\nRoom number:%d.",h.name,h.email,h.pno,h.pinno,h.rno);
+	fclose(fp);
+}
+int cout()
+{
+	int rn;
+	printf("Enter your room number:");
+	scanf("%d",&rn);
+	int ra;
+	printf("Rate your expireince in our hotel(from 0 to 10):");
+	scanf("%d",&ra);
+	switch(ra)
+	
+		if(ra<8)
+		{
+			printf("Would you like to tell us how could we improve our service?");
+		{
+			int k;
+			char re[1000];
+			printf("\n1: Yes\n2: No\n");
+			scanf("%d",&k);
+			switch(k)
+			{
+				case 1: printf("Type here:");
+						scanf("%s",re);break;
+				case 2:
+					default:break;
+			}
+		}
+	}
+		else
+		printf("Thank you for your visit to our hotel\nHope You'll visit again.");
+		
+	
+	printf("					Successfully checkedout.");
+	printf("\nDo you still want to explore?");
+	printf("\n1:Yes\t2:No\n");
+	int j;
+	
+	scanf("%d",&j);
+	switch(j)
+	{
+		case 1:return main1();break;
+		case 2: printf("Thank you for visiting."); return 0; break;;
+		default:break;
+	}
+}
+int restraunt()
+{
+	int g;
+	printf("Which type of food do you want to eat:");
+	printf("\n1: Indian\n");
+	printf("2: Italian\n");
+	printf("3: Arab\n");
+	printf("4: American\n");
+	scanf("%d",&g);
+	switch(g)
+	{
+		case 1:ind();break;
+		case 2:it();break;
+		case 3:arab();break;
+		case 4:amer();break;
+		default:printf("Invalid input.");
+	}
+		printf("\nDo you still want to explore?\n");
+		printf("1:Yes\t2:No");
+	int k;
+	scanf("%d",&k);
+	
+	switch(k)
+	{
+		case 1:return main1();break;
+		case 2: printf("Thank you for visiting.");break;
+		default:break;
+	}
+	return 0;
+}
+
+
+int ind()
+{
+	int m,n;
+	printf("What would you want to eat?\n");
+	printf("\n1: Chicken biriyani\t\t250/-\n");
+	printf("2: Spc Chicken biriyani\t\t300/-\n");
+	printf("3: Mutton Biriyani\t280/-\n");
+	printf("4: Paratha with paya\t60/-\n");
+	printf("5: Chapathi with chicken\t50/-\n");
+	printf("6: Dosa with chutney\t40/-\n");
+	printf("7: Masala Dosa\t50/-\n");
+	printf("8: Manchuria\t70/-\n");
+	printf("9: Noodles\t60/-\n");
+	scanf("%d",&m);
+	printf("How many plates would you like to order?");
+	scanf("%d",&n);
+	switch(m)
+	{
+		case 1: bill=bill+(n*250);break;
+		case 2: bill=bill+(n*300);break;
+		case 3: bill=bill+(n*280);break;
+		case 4: bill=bill+(n*60);break;
+		case 5: bill=bill+(n*50);break;
+		case 6: bill=bill+(n*40);break;
+		case 7: bill=bill+(n*50);break;
+		case 8: bill=bill+(n*70);break;
+		case 9: bill=bill+(n*60);break;
+		default: break;
+	}
+	int c;
+	printf("\nDo you want to order anything else?\n1:Yes\t2:No\n");
+	scanf("%d",&c);
+	switch (c)
+	{
+		case 1: return restraunt();break;
+		case 2:  
+		default:break;
+	}
+	    amt(bill);	
+	
+}
+int it()
+{
+	int m,n;
+	printf("What would you want to eat?\n");
+	printf("\n1: Risotto Alla Milanese\t250/-\n");
+	printf("2: Polenta\t300/-\n");
+	printf("3: Lasagna\t280/-\n");
+	printf("4: Ravioli\t60/-\n");
+	printf("5: Osso buco\t50/-\n");
+	printf("6: Arancini\t40/-\n");
+	printf("7: Ribollita\t50/-\n");
+	printf("8: Spaghetti Alla Carbonara\t70/-\n");
+	printf("9: Neapolitan pizza\t60/-\n");
+	scanf("%d",&m);
+	printf("How many plates would you like to order?");
+	scanf("%d",&n);
+	switch(m)
+	{
+		case 1: bill=bill+(n*250);break;
+		case 2: bill=bill+(n*300);break;
+		case 3: bill=bill+(n*280);break;
+		case 4: bill=bill+(n*60);break;
+		case 5: bill=bill+(n*50);break;
+		case 6: bill=bill+(n*40);break;
+		case 7: bill=bill+(n*50);break;
+		case 8: bill=bill+(n*70);break;
+		case 9: bill=bill+(n*60);break;
+		default:  break;
+	}
+	int c;
+	printf("\nDo you want to order anything else?\n1:Yes\t2:No\n");
+	scanf("%d",&c);
+	switch (c)
+	{
+		case 1: return restraunt();break;
+		case 2:  
+		default:break;
+	}
+	    amt(bill);	
+}
+int arab()
+{
+	int m,n;
+	printf("What would you want to eat?\n");
+	printf("\n1: Hummus\t250/-\n");
+	printf("2: Manakeesh\t300/-\n");
+	printf("3: Grilled halloumi\t280/-\n");
+	printf("4: Foul meddamas\t60/-\n");
+	printf("5: Falafel\t50/-\n");
+	printf("6: Tabouleh\t40/-\n");
+	printf("7: Moutabal/baba ghanoush\t50/-\n");
+	printf("8: Fattoush\t70/-\n");
+	printf("9: Umm ali\t60/-\n");
+	scanf("%d",&m);
+	printf("How many plates would you like to order?");
+	scanf("%d",&n);
+	switch(m)
+	{
+		case 1: bill=bill+(n*250);break;
+		case 2: bill=bill+(n*300);break;
+		case 3: bill=bill+(n*280);break;
+		case 4: bill=bill+(n*60);break;
+		case 5: bill=bill+(n*50);break;
+		case 6: bill=bill+(n*40);break;
+		case 7: bill=bill+(n*50);break;
+		case 8: bill=bill+(n*70);break;
+		case 9: bill=bill+(n*60);break;
+		default:   break;
+	}
+	int c;
+	printf("\nDo you want to order anything else?\n1:Yes\t2:No\n");
+	scanf("%d",&c);
+	switch (c)
+	{
+		case 1: return restraunt();break;
+		case 2:  
+		default:break;
+	}
+	    amt(bill);	
+
+}
+int amer()
+{
+	int m,n;
+	printf("What would you want to eat?\n");
+	printf("\n1: Special Chicken Burger with fries\t250/-\n");
+	printf("2: Special Hot Dog\t300/-\n");
+	printf("3: Mac and Cheese\t280/-\n");
+	printf("4: Pancakes\t60/-\n");
+	printf("5: Chicken and Waffles\t50/-\n");
+	printf("6: Cronut\t40/-\n");
+	printf("7: S'mores\t50/-\n");
+	printf("8: Chocolate Chip Cookies\t70/-\n");
+	printf("9: Breakfast Sausage\t60/-\n");
+	scanf("%d",&m);
+	printf("How many plates would you like to order?");
+	scanf("%d",&n);
+	switch(m)
+	{
+		case 1: bill=bill+(n*250);break;
+		case 2: bill=bill+(n*300);break;
+		case 3: bill=bill+(n*280);break;
+		case 4: bill=bill+(n*60);break;
+		case 5: bill=bill+(n*50);break;
+		case 6: bill=bill+(n*40);break;
+		case 7: bill=bill+(n*50);break;
+		case 8: bill=bill+(n*70);break;
+		case 9: bill=bill+(n*60);break;
+		default:  break;
+	}
+	int c;
+	printf("\nDo you want to order anything else?\n1:Yes\t2:No\n");
+	scanf("%d",&c);
+	switch (c)
+	{
+		case 1: return restraunt();break;
+		case 2:  
+		default:break;
+	}
+    amt(bill);	
+}
+int amt(int bill)
+{
+	printf("Your restraunt bill:%d",bill);
+	
+}
+
+int welcome()
+{
+	printf("\t\t<<<<<<<WELCOME TO OUR HOTEL>>>>>>>");
+	printf("\n\tA 7 storeyed luxorious hotel");
+}
+int main()
+{
+	welcome();
+	int n;
+	printf("\nWhat do you want to access?");
+	printf("\n1: Availabity of rooms");
+	printf("\n2: View features");
+	printf("\n3: Book a room");
+	printf("\n4: Checkout");
+	printf("\n5: Restraunt menu\n");
+	scanf("%d",&n);
+	switch (n)
+	{
+		case 1: availability();break;
+		case 2: features();break;
+		case 3: rselect();break;
+		case 4: cout();break;
+		case 5: restraunt();break;
+		default: printf("Invalid input.");
+	}
+}
